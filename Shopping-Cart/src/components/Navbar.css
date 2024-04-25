@@ -1,0 +1,47 @@
+:root{
+    --bg:rgb(19,29,46);
+}
+
+
+.nav-button
+{
+    background-color:var(--bg);
+    width: fit-content;
+    color: white;
+    padding: 0.4rem 1rem;
+    box-shadow: 5px 5px 7px 8px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-button::before
+{   content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+
+}
+
+.nav-button:hover::before
+{
+     transform: scaleX(1);
+}
+
+.nav-button:hover
+{
+    border:solid 3px var(--bg);
+    color: black;
+
+}
